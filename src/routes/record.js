@@ -42,11 +42,11 @@ router.post('/', async (req, res, next) => {
 
 router.put('/:recordId', async (req, res, next) => {
   
-  // const recordId = req.recordId;
-  // const updateRecord = RecordModel(recordId, req.body)
-  // await updateRecord.save();
-  // res.status(201).send(updateRecord);
-  return res.status(501).send('Not implemented');
+  const updateRecord = await RecordModel.findByIdAndUpdate(req.params.recordId, req.body)
+  if (!updateRecord) {
+    res.status(501).send('Not implemented')
+  }
+  return res.status(201).send(updateRecord);
 });
 
 router.delete('/:recordId', async (req, res, next) => {
