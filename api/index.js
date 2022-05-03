@@ -8,7 +8,7 @@ require('dotenv').config();
 const config = require('../src/config');
 const PORT = config.port;
 
-const recordRouter = require('../routes/record');
+const recordRouter = require('../src/routes/record');
 
 const app = express();
 
