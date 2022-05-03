@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 require('dotenv').config();
-const config = require('../config');
+const config = require('../src/config');
 const PORT = config.port;
 
 const recordRouter = require('../routes/record');
