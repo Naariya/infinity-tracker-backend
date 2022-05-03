@@ -1,13 +1,3 @@
-// module.exports = {
-//   mongoUri: 'mongodb+srv://sandbox.fsckv.mongodb.net',
-//   mongoOptions: {
-//     user: 'm001-student',
-//     pass: 'm001-mongodb-basics',
-//     dbName: 'myFirstDatabase',
-//     retryWrites: true,
-//     w: 'majority',
-//   },
-// };
 require('dotenv').config();
 
 module.exports = {
