@@ -1,4 +1,3 @@
-// module.exports = require('../src/app');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
