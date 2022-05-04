@@ -4,19 +4,18 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 require('dotenv').config();
-const config = require('../src/config');
+const config = require('../config');
 const PORT = config.port;
 
-const recordRouter = require('../src/routes/record');
+const recordRouter = require('../routes/record');
 
 const app = express();
 
-if (config.isVercel) {
-  app.use(async (req, res, next) => {
+app.use(async (req, res, next) => {
     await mongoose.connect(config.mongoUri, config.mongoOptions);
     return next();
-  });
-}
+});
+
 
 app.use(bodyParser.json());
 app.use(
